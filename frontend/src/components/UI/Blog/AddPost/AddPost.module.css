@@ -1,0 +1,74 @@
+.edit-group {
+    padding: 3.5rem 20%;
+}
+
+.edit-group h1 {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(175, 175, 175);
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.edit-group form {
+    width: 75%;
+    margin: auto;
+}
+
+.submit {
+    color: rgb(219, 219, 219);
+    border: 1px solid rgb(219, 219, 219);
+    padding: 7px;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 4px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.submit:hover {
+    background-color: rgb(226, 226, 226);
+    color: rgb(19, 24, 29);
+}
+
+.edit-group label {
+    display: block;
+    color: rgb(201, 199, 199);
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-right: auto;
+}
+
+.input {
+    color: rgb(226, 226, 226);
+    border-color: rgb(138, 138, 138);
+    font-size: 16px;
+    padding: 10px;
+    background-color: transparent;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+.edit-group select {
+    height: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+
+.edit-group select option {
+    background-color: rgb(19, 24, 29);
+}
+
+.quill {
+    color: rgb(226, 226, 226);
+}
+ 
+.warning {
+    margin-top: 20px;
+    color: rgb(197, 97, 97);
+}

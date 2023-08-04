@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+    color: rgb(216, 216, 216);
+}
+
+.bmi-group {
+    padding: 4rem 20%;
+}
+
+.bmi-group h1, .red {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    text-align: center;
+}
+
+.bmi-group h1 {
+    color: rgb(190, 190, 190);
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+
+.red {
+    color: rgb(160, 66, 66);
+}
+
+.calculator-section {
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    width: 540px;
+    background-color: black;
+    padding: 2.3rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(22, 28, 34);
+}
+
+.calculator form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.form-input {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgb(100, 100, 100);
+    margin-bottom: 25px;
+} 
+
+.form-input:focus {
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.invalid {
+    border-color: rgb(160, 66, 66);
+}
+
+.calculator form button {
+    display: block;
+    margin: auto;
+    padding: 7px;
+    font-size: 15px;
+    background-color: transparent;
+    color: rgb(224, 224, 224);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: .3s;
+}
+
+.calculator form button:hover {
+    background-color: rgb(224, 224, 224);
+    color: rgb(22, 28, 34);
+}
+
+.calculator div h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.calculator div p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.bmi-image {
+    width: 245px;
+    height: 245px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.card {
+    height: 400px;
+    width: 340px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(22, 28, 34);
+}
+
+.card h2, .h2-red {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: "Audiowide";
+    text-align: center;
+}
+
+.card h2 {
+    color: rgb(189, 87, 87);
+    font-size: 23px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 21px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.line {
+    height: 1px;
+    width: 200px;
+    margin: auto;
+    background-color: rgb(95, 95, 95);
+}
+
+.result-group {
+    margin-top: 2.5rem;
+}
+
+.result-bmi {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.healthy-result {
+    color: rgb(182, 182, 141);
+}
+
+.unhealthy-result {
+    color: rgb(160, 66, 66);
+}
+
+

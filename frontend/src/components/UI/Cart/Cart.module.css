@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.header {
+    font-family: 'Audiowide';
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    color: rgb(170, 170, 170);
+}
+
+.cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 30rem;
+    overflow: auto;
+}
+
+.cart-items p {
+    text-align: center;
+}
+  
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.total span {
+    margin-top: 25px;
+    color: rgb(194, 194, 194);
+}
+
+.actions {
+    float: right;
+}
+
+.order-btn, .close-btn {
+    padding: 8px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid rgb(170, 170, 170);
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 8px;
+    color: rgb(170, 170, 170);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn {
+    border: none;
+}
+
+
+.order-btn:hover {
+    background-color:rgb(170, 170, 170);
+    color: rgb(13, 15, 19);
+}

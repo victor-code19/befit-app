@@ -1,0 +1,24 @@
+.cart-btn {
+    width: 63px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    padding: 4px 9px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-left: 4.15rem;
+}
+
+.icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.amount {
+    color: #c4c4c4;
+}

@@ -1,0 +1,9 @@
+.header {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(175, 175, 175);
+    text-align: center;
+    margin-bottom: 70px;
+    letter-spacing: 2.5px;
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.signup-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 35%;
+}
+
+.signup-group h2 {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: rgb(160, 66, 66);
+}
+
+.signup-group form {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(22, 28, 34);
+    padding: 35px;
+}
+
+.signup-group form label {
+    display: block;
+    color: rgb(201, 199, 199);
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-input {
+    width: 300px;
+    height: 35px;
+    font-size: 15px;
+    text-indent: 6px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgb(70, 70, 70);
+    margin-bottom: 5px;
+}
+
+.invalid {
+    border-color: rgb(160, 66, 66);
+    margin-bottom: 5px;
+}
+
+.form-input.invalid:focus {
+    outline: none;
+    border-color: rgb(160, 66, 66);
+}
+
+.error-info {
+    color: rgb(160, 66, 66);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.email-in-use-info {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(160, 66, 66);
+}
+
+.signup-group button {
+    display: block;
+    margin: auto;
+    padding: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #79a57b; 
+    color: rgb(19, 24, 29);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	transition: .3s;
+}
+
+.signup-group button:hover{
+    background-color: #a3d8a6;
+}
+
+.login-message, .signup-group form a {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.login-message {
+    color: rgb(201, 199, 199);
+}
+
+.signup-group form a {
+    color: rgb(128, 175, 223);
+}
+
+.input-error {
+    border-color: rgb(160, 66, 66);
+}
+
+.line {
+    height: 1px;
+    width: 200px;
+    background-color: rgb(131, 131, 131);
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}

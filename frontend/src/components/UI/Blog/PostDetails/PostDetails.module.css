@@ -1,0 +1,87 @@
+.main {
+    padding: 5rem 16%;
+    width: 1350px;
+}
+
+.main h2 {
+    color: rgb(214, 214, 214);
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.main h3 {
+    font-size: 20px;
+    width: 650px;
+    font-weight: 500;
+    color: rgb(214, 214, 214);
+    margin-bottom: 50px;
+}
+
+.main p {
+    font-size: 16px;
+    width: 650px;
+    color: rgb(214, 214, 214);
+    font-weight: 400;
+}
+
+.main a {
+    margin-left: 4px;
+    color: rgb(214, 214, 214);
+} 
+
+.category {
+    display: inline-block;
+    color: rgb(135, 189, 156);
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgb(135, 189, 156);
+    border-radius: 5px;
+}
+
+.date {
+    color: rgb(135, 189, 156);
+    display: inline;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    margin-top: 35px;
+}
+
+.actions a, .actions button {
+    padding: 7px;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.actions a {
+    color: rgb(224, 224, 224);
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.actions button {
+    color: rgb(207, 110, 110);
+    border: 1px solid rgb(207, 110, 110);
+}
+
+.actions a:hover {
+    background-color: rgb(224, 224, 224);
+    color: rgb(22, 28, 34);
+}
+
+.actions button:hover {
+    background-color: rgb(207, 110, 110);
+    color: rgb(22, 28, 34);
+}

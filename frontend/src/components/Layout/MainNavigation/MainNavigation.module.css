@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: rgb(19, 24, 29);
+    position: sticky;
+    top: 0;
+    transition: 0.2s;
+}
+
+.scrolled {
+    padding: 10px 10%;
+    box-shadow: 0px 15px 10px -15px #000000;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+ 
+.nav__links li a {
+    color: #f3f3f3;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    padding: 10px 0;
+	transition: color .3s ease-in-out;
+}
+
+.nav__links li a::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.nav__links li a::after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(146, 52, 52);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.nav__links li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.nav__links li a.active {
+    font-weight: 700;
+}
+
+.dropdown {
+    position: relative;  
+}
+
+.dropdown ul {
+    width: 130px;
+    text-align: center;
+    position: absolute;
+    background-color: rgb(23, 30, 36);
+    padding: 0;
+    margin-top: 10px;
+    border-radius: 7px;
+    display: none;
+}
+
+.dropdown ul li {
+    padding: .5rem;
+}
+
+.dropdown ul li a {
+    display: inline-block;
+}
+
+.dropdown a:focus + ul,
+.dropdown a:hover + ul,
+.dropdown ul:hover {
+    display: block;
+}
+
+
+.login__btn, .logout__btn {
+    font-size: 17px;
+    font-weight: 500;
+    color: #79a57b;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #79a57b; 
+	transition: .3s;
+    background-color: transparent;
+    cursor: pointer;
+} 
+
+.logout__btn {
+    margin-left: 1.5rem;
+}
+
+.login__btn {
+    margin-left: 4rem;
+}
+
+.login__btn:hover, .logout__btn:hover {
+    background-color: #79a57b;
+    color: rgb(19, 24, 29);
+} 
+
+.signin__btn {
+    font-size: 17px;
+    font-weight: 500;
+    color: #c0c0c0;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;  
+    margin-left: 1rem;
+	transition: .3s
+} 
+
+.signin__btn:hover {
+    background-color: #c0c0c0;  
+    color: rgb(19, 24, 29);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 3rem;
+    width: 129px;
+    height: 77px;
+}

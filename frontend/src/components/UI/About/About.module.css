@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.top {
+    padding: 4rem 20%;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.top h1, .top span {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.top h1 {
+    color: rgb(190, 190, 190);
+}
+
+.top span {
+    color: rgb(160, 66, 66);
+}
+
+.top img {
+    margin-top: 60px;
+    width: 516px;
+    height: 211px;
+}
+
+.lower {
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line {
+    height: 1px;
+    width: 200px;
+    margin: auto;
+    background-color: rgb(99, 99, 99);
+}
+
+.about {
+    margin-top: 5rem;
+    width: 90%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about--reverse {
+    margin-top: 5rem;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.about__title {
+    font-family: 'Audiowide';
+    font-weight: 500;
+    font-size: 35px;
+    color:rgb(201, 201, 201);
+    margin-bottom: 40px;
+}
+
+.about__description {
+    width: 595px;
+}
+
+.red {
+    font-family: 'Audiowide';
+    color: #79a57b;
+    font-size: 35px;
+}
+
+.about__description p {
+    color: rgb(224, 224, 224);
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.description_icon {
+    height: 400px;
+    width: 400px;
+}

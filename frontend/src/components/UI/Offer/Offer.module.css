@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 17%;
+    margin-bottom: 5rem;
+}
+
+.offer h1 {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(190, 190, 190);
+    margin-bottom: 5rem;
+}
+
+.red {
+    font-family: 'Audiowide';
+    color: rgb(160, 66, 66);
+    font-size: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 600px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 370px;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(22, 28, 34);
+}
+
+.card h2 {
+    font-family: 'Audiowide';
+    font-size: 30px;
+    font-weight: 500;
+    color: #8bad8d;
+    text-align: center;
+}
+
+.card ul {
+    list-style-type: square;
+    width: 270px;
+    padding-left: 10px;
+}
+
+.card ul li {
+    font-size: 15px;
+    color: rgb(233, 233, 233);
+    padding: 10px;
+}
+
+.card div {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card div span {
+    font-family: 'Audiowide';
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(189, 107, 107);
+}
+
+.dollar {
+    font-family: 'Raleway';
+    font-size: 50px;
+}
+
+.card button {
+    font-size: 15px;
+    background-color: transparent;
+    color: #dfdfdf;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #8bad8d;
+    cursor: pointer;
+	transition: .3s;
+}
+
+.card button:hover {
+    background-color: #8bad8d; 
+    color: rgb(22, 28, 34);
+}

@@ -1,0 +1,45 @@
+.blog-group {
+    padding: 3rem 15%;
+}
+
+.blog-group h1, .blog-group span  {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(175, 175, 175);
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.blog-group span {
+    color: rgb(160, 66, 66);
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    width: 34%;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background-color: rgb(100, 100, 100);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.no-posts {
+    font-size: 18px;
+    margin: auto;
+}

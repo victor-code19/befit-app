@@ -1,0 +1,8 @@
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 70px;
+}
