@@ -1,13 +1,13 @@
-import { Schema, model } from 'mongoose';
+import { Document, Schema, model } from 'mongoose';
 
-interface IService {
+export interface IService {
   id: string;
   name: string;
   price: number;
   quantity: number;
 }
 
-export interface IOrder {
+interface IOrder extends Document {
   services: IService[];
   totalAmount: number;
   orderedBy: Schema.Types.ObjectId;

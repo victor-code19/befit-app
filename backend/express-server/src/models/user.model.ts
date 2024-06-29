@@ -1,18 +1,27 @@
-import { Schema, model } from 'mongoose';
+import { Document, Model, Schema, model } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import validator from 'validator';
 
-export interface IUser {
+export interface IUser extends Document {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
   role: string;
   tokens: Array<{ token: string }>;
+  generateAuthToken(): Promise<string>;
 }
 
-const userSchema = new Schema<IUser>({
+interface IUserMethods {
+  generateAuthToken(): Promise<string>;
+}
+
+interface UserModel extends Model<IUser, {}, IUserMethods> {
+  findByCredentials(email: string, password: string): Promise<IUser>;
+}
+
+const userSchema = new Schema<IUser, UserModel, IUserMethods>({
   firstName: {
     type: String,
     trim: true,
@@ -82,7 +91,10 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-userSchema.statics.findByCredentials = async function (email: string, password: string) {
+userSchema.statics.findByCredentials = async function (
+  email: string,
+  password: string
+): Promise<IUser> {
   const user = await User.findOne({ email });
 
   if (!user) {
@@ -98,7 +110,7 @@ userSchema.statics.findByCredentials = async function (email: string, password: 
   return user;
 };
 
-userSchema.methods.generateAuthToken = async function () {
+userSchema.methods.generateAuthToken = async function (): Promise<string> {
   const user = this;
   const token = jwt.sign({ _id: user.id.toString() }, process.env.SECRET!);
 
@@ -108,7 +120,7 @@ userSchema.methods.generateAuthToken = async function () {
   return token;
 };
 
-userSchema.methods.toJSON = function () {
+userSchema.methods.toJSON = function (): Omit<IUser, 'password' | 'tokens'> {
   const user = this;
   const userObject = user.toObject();
 
@@ -118,6 +130,6 @@ userSchema.methods.toJSON = function () {
   return userObject;
 };
 
-const User = model<IUser>('User', userSchema);
+const User = model<IUser, UserModel>('User', userSchema);
 
 export default User;

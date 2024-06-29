@@ -1,7 +1,7 @@
-import { Schema, model } from 'mongoose';
+import { Schema, Document, model } from 'mongoose';
 import validator from 'validator';
 
-export interface INewsletter {
+export interface INewsletter extends Document {
   email: string;
 }
 
