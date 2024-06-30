@@ -2,6 +2,9 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 
+nltk.download('stopwords')
+nltk.download('punkt')
+
 stop_words = stopwords.words('english')
 ps = PorterStemmer()
 
