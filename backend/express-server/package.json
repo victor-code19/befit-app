@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "befit-app",
   "main": "app.js",
-  "scripts": { 
-    "start": "env-cmd -f ./config/dev.env node src/index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "env-cmd -f ./config/dev.env nodemon build/index.js",
+    "start": "concurrently npm:start:*",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "test:user": "env-cmd -f ./config/test.env jest user.test.js --watchAll",
     "test:post": "env-cmd -f ./config/test.env jest post.test.js --watchAll",
     "test:newsletter": "env-cmd -f ./config/test.env jest newsletter.test.js --watchAll",
     "test:order": "env-cmd -f ./config/test.env jest order.test.js --watchAll"
-
   },
   "jest": {
     "testEnvironment": "node"
@@ -19,16 +20,29 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
+    "@types/compression": "^1.7.3",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.5",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "concurrently": "^8.2.1",
     "cors": "^2.8.5",
     "env-cmd": "^10.1.0",
     "express": "^4.18.2",
+    "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.2.0",
     "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
     "validator": "^13.9.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.3",
+    "@types/cors": "^2.8.14",
+    "@types/jest": "^29.5.5",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/supertest": "^2.0.12",
+    "@types/validator": "^13.11.1",
     "jest": "^29.5.0",
     "supertest": "^6.3.3"
   }
