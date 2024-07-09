@@ -1,0 +1,35 @@
+services:
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /home/node/app/node_modules
+      - ./client:/home/node/app
+    environment:
+      - WDS_SOCKET_PORT=0
+  express-api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend/express-server
+    volumes:
+      - /home/node/app/node_modules
+      - ./backend/express-server:/home/node/app
+    environment:
+      - PORT=8080
+      - MONGODB_CONNECTION_STRING=mongodb+srv://wmruk:OlYqjCM7vFjX3Yr3@cluster1.dx6hq7k.mongodb.net/befit?retryWrites=true&w=majority
+      - SENDGRID_API_KEY=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
+      - SECRET=SECRET_KEY
+  flask-api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend/flask-server
+    volumes:
+      - ./backend/flask-server:/app
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - '3050:80'
