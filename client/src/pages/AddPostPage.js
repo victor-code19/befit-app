@@ -1,7 +1,7 @@
-import { json, redirect } from "react-router-dom";
-import { getAuthToken } from "../utils/auth";
+import { json, redirect } from 'react-router-dom';
+import { getAuthToken } from '../utils/auth';
 
-import AddPost from "../components/UI/Blog/AddPost/AddPost";
+import AddPost from '../components/UI/Blog/AddPost/AddPost';
 
 const AddPostPage = () => {
   return <AddPost />;
@@ -13,16 +13,16 @@ export const action = async ({ request }) => {
   const data = await request.formData();
 
   const postData = {
-    title: data.get("title"),
-    introduction: data.get("introduction"),
-    content: data.get("content"),
-    category: data.get("category"),
+    title: data.get('title'),
+    introduction: data.get('introduction'),
+    content: data.get('content'),
+    category: data.get('category'),
   };
 
-  const response = await fetch("http://localhost:8080/blog/post", {
+  const response = await fetch('/api/blog/post', {
     method: request.method,
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${getAuthToken()}`,
     },
     body: JSON.stringify(postData),
@@ -35,7 +35,7 @@ export const action = async ({ request }) => {
   }
 
   if (!response.ok) {
-    throw json({ message: "Could not add post." }, { status: 500 });
+    throw json({ message: 'Could not add post.' }, { status: 500 });
   }
 
   return redirect(`/blog/${responseData.id}`);

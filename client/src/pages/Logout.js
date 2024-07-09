@@ -1,11 +1,11 @@
-import { redirect, json } from "react-router-dom";
-import { getAuthToken } from "../utils/auth";
+import { redirect, json } from 'react-router-dom';
+import { getAuthToken } from '../utils/auth';
 
 export const action = async ({ request }) => {
-  const response = await fetch("http://localhost:8080/users/logout", {
+  const response = await fetch('/api/users/logout', {
     method: request.method,
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${getAuthToken()}`,
     },
   });
@@ -15,11 +15,11 @@ export const action = async ({ request }) => {
   }
 
   if (!response.ok) {
-    throw json({ message: "Unable to logout user" }, { status: 500 });
+    throw json({ message: 'Unable to logout user' }, { status: 500 });
   }
 
-  localStorage.removeItem("token");
-  localStorage.removeItem("role");
+  localStorage.removeItem('token');
+  localStorage.removeItem('role');
 
-  return redirect("/");
+  return redirect('/');
 };

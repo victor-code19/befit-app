@@ -1,26 +1,26 @@
-import { useFetcher } from "react-router-dom";
-import { useFormik } from "formik";
-import { newsletterForm } from "../../../schemas/index";
+import { useFetcher } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { newsletterForm } from '../../../schemas/index';
 
-import classes from "./Newsletter.module.css";
+import classes from './Newsletter.module.css';
 
 const Newsletter = () => {
   const fetcher = useFetcher();
-  const isSubmitting = fetcher.state === "submitting";
+  const isSubmitting = fetcher.state === 'submitting';
 
   const onSubmit = (data) => {
-    fetcher.submit(data, { method: "post", action: "/newsletter" });
+    fetcher.submit(data, { method: 'post', action: '/newsletter' });
   };
 
   const buttonState = isSubmitting
-    ? "Signing up..."
+    ? 'Signing up...'
     : fetcher.data && fetcher.data.status === 201
-    ? "Signed up ✔"
-    : "Sign up";
+    ? 'Signed up ✔'
+    : 'Sign up';
 
   const { values, errors, handleChange, handleBlur, touched, handleSubmit } = useFormik({
     initialValues: {
-      email: "",
+      email: '',
     },
     validationSchema: newsletterForm,
     onSubmit,
@@ -37,16 +37,16 @@ const Newsletter = () => {
           onBlur={handleBlur}
           placeholder="Type your email"
           name="email"
-          className={`${classes["form-input"]} ${
+          className={`${classes['form-input']} ${
             errors.email && touched.email && classes.invalid
           }`}
         />
         {fetcher.data && fetcher.data.error ? (
-          <p className={`${classes["error-info"]} ${classes.invalid}`}>
+          <p className={`${classes['error-info']} ${classes.invalid}`}>
             {fetcher.data.error.message}
           </p>
         ) : (
-          <p className={classes["error-info"]}>&nbsp;</p>
+          <p className={classes['error-info']}>&nbsp;</p>
         )}
         <button
           type="submit"
@@ -63,12 +63,12 @@ export default Newsletter;
 
 export const action = async ({ request }) => {
   const data = await request.formData();
-  const email = data.get("email");
+  const email = data.get('email');
 
-  const response = await fetch("http://localhost:8080/newsletter/signup", {
+  const response = await fetch('/api/newsletter/signup', {
     method: request.method,
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ email }),
   });
