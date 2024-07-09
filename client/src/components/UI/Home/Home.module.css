@@ -1,174 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 .top {
-    padding: 4.5rem 13%;
-    display: flex;
-    margin-bottom: 50px;
+  padding: 4.5rem 13%;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .lower {
-    padding: 4.5rem 10%;
+  padding: 4.5rem 10%;
 }
 
-.slogan__red, .slogan__white {
-    font-family: 'Audiowide', cursive;
-    font-size: 58px; 
-    display: block;
+.slogan__red,
+.slogan__white {
+  font-family: 'Audiowide', cursive;
+  font-size: 58px;
+  display: block;
 }
 
 .slogan__red {
-    color: rgb(160, 66, 66);
+  color: rgb(160, 66, 66);
 }
 
 .slogan__white {
-    color: rgb(201, 199, 199);
+  color: rgb(201, 199, 199);
 }
 
 .description {
-    color: rgb(224, 224, 224);
-    font-size: 18px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    line-height: 1.4;
+  color: rgb(224, 224, 224);
+  font-size: 18px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
 }
 
 .offer__btn {
-    color: rgb(238, 238, 238);
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #79a57b;
-    transition: 0.3s;
+  color: rgb(238, 238, 238);
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #79a57b;
+  transition: 0.3s;
 }
 
 .offer__btn:hover {
-    background-color: #79a57b;
-    color: rgb(19, 24, 29);
+  background-color: #79a57b;
+  color: rgb(19, 24, 29);
 }
 
 .main_photo {
-    width: 324px;
-    height: 240px;
-    margin-left: 5rem;
-    margin-top: 5rem;
+  width: 324px;
+  height: 240px;
+  margin-left: 5rem;
+  margin-top: 5rem;
 }
 
 .line {
-    width: 400px;
-    height: 1px;
-    margin: auto;
-    background-color: rgb(121, 121, 121);
+  width: 400px;
+  height: 1px;
+  margin: auto;
+  background-color: rgb(121, 121, 121);
 }
 
 .container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 1400px;
-    margin: auto;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 1400px;
+  margin: auto;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .card {
-    width: 350px;
-    padding-top: 30px;
-    height: 480px;
-    background-color: rgb(22, 28, 34);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
+  width: 350px;
+  padding-top: 30px;
+  height: 480px;
+  background-color: rgb(22, 28, 34);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
 }
 
 .card span {
-    font-size: 60px;
-    display: block;
+  font-size: 60px;
+  display: block;
 }
 
 .card h2 {
-    color: #8bad8d;
-    margin-top: 15px;
-    font-family: 'Audiowide';
-    font-size: 23px;
-    font-weight: 700;
+  color: #8bad8d;
+  margin-top: 15px;
+  font-family: 'Audiowide';
+  font-size: 23px;
+  font-weight: 700;
 }
 
 .card p {
-    font-size: 15px;
-    font-weight: 400;
-    color: rgb(224, 224, 224);
-    text-align: justify;
-    margin: 2.2rem;
-    line-height: 1.4;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(224, 224, 224);
+  text-align: justify;
+  margin: 2.2rem;
+  line-height: 1.4;
 }
 
 .slogan_two {
-    margin: auto;
-    width: 650px;
+  margin: auto;
+  width: 650px;
 }
-
-/* Responsive Styles
-@media only screen and (max-width: 768px) {
-    .container {
-      flex-wrap: wrap;
-      width: 90%;
-    }
-  
-    .card {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  
-    .main_photo {
-      display: none;
-    }
-  
-    .line {
-      width: 90%;
-    }
-  }
-  
-  @media only screen and (max-width: 576px) {
-    .top,
-    .lower {
-      padding: 4.5rem 5%;
-    }
-  
-    .slogan__red,
-    .slogan__white {
-      font-size: 40px;
-    }
-  
-    .description {
-      font-size: 16px;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-  
-    .main_photo {
-      width: 80%;
-      height: auto;
-      margin-left: 0;
-      margin-top: 2rem;
-    }
-  
-    .container {
-      flex-direction: column;
-      width: 90%;
-    }
-  
-    .card {
-      width: 100%;
-      height: auto;
-      padding: 20px;
-      margin-bottom: 2rem;
-    }
-  
-    .card h2 {
-      font-size: 20px;
-    }
-  
-    .card p {
-      font-size: 14px;
-      margin: 1.2rem;
-    }
-} */

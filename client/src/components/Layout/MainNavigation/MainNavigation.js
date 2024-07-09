@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { NavLink, Link, useLoaderData, Form } from "react-router-dom";
-import { isAdminLogged } from "../../../utils/auth";
+import { useState } from 'react';
+import { NavLink, Link, useLoaderData, Form } from 'react-router-dom';
+import { isAdminLogged } from '../../../utils/auth';
 
-import Cart from "../../UI/Cart/Cart";
-import CartButton from "../../UI/Cart/CartButton";
+import Cart from '../../UI/Cart/Cart';
+import CartButton from '../../UI/Cart/CartButton';
 
-import logo from "../../../assets/logo-befit.png";
+import logo from '../../../assets/logo-befit.png';
 
-import classes from "./MainNavigation.module.css";
+import classes from './MainNavigation.module.css';
 
 const activeClassHandler = ({ isActive }) => {
   return isActive ? classes.active : undefined;
@@ -33,7 +33,7 @@ const MainNavigation = () => {
     setShowCartModal(false);
   };
 
-  window.addEventListener("scroll", changeNavbar);
+  window.addEventListener('scroll', changeNavbar);
 
   const token = useLoaderData();
   const isAdminAuthenticated = isAdminLogged();
